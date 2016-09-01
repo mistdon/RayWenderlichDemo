@@ -18,6 +18,8 @@
 		3BD1E6371D76D852003E1F10 /* littledog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3BD1E6361D76D852003E1F10 /* littledog.jpg */; };
 		3BD1E6391D76D9F3003E1F10 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E6381D76D9F3003E1F10 /* PlayerCell.swift */; };
 		3BD1E63D1D76E171003E1F10 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E63C1D76E171003E1F10 /* PlayerDetailsViewController.swift */; };
+		3BD1E63F1D77C5A4003E1F10 /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E63E1D77C5A4003E1F10 /* GamePickerViewController.swift */; };
+		3BD1E66C1D77D773003E1F10 /* RatingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1E66B1D77D773003E1F10 /* RatingPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3BD1E6361D76D852003E1F10 /* littledog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = littledog.jpg; sourceTree = "<group>"; };
 		3BD1E6381D76D9F3003E1F10 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		3BD1E63C1D76E171003E1F10 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		3BD1E63E1D77C5A4003E1F10 /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
+		3BD1E66B1D77D773003E1F10 /* RatingPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				3BD1E61E1D76C44D003E1F10 /* ViewController.swift */,
 				3BD1E62E1D76C9F7003E1F10 /* PlayersViewController.swift */,
 				3BD1E63C1D76E171003E1F10 /* PlayerDetailsViewController.swift */,
+				3BD1E63E1D77C5A4003E1F10 /* GamePickerViewController.swift */,
+				3BD1E66B1D77D773003E1F10 /* RatingPickerViewController.swift */,
 				3BD1E6341D76CBD3003E1F10 /* SampleData.swift */,
 				3BD1E6301D76CA5B003E1F10 /* Player.swift */,
 				3BD1E6381D76D9F3003E1F10 /* PlayerCell.swift */,
@@ -154,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD1E63F1D77C5A4003E1F10 /* GamePickerViewController.swift in Sources */,
 				3BD1E6391D76D9F3003E1F10 /* PlayerCell.swift in Sources */,
 				3BD1E6311D76CA5B003E1F10 /* Player.swift in Sources */,
 				3BD1E61F1D76C44D003E1F10 /* ViewController.swift in Sources */,
+				3BD1E66C1D77D773003E1F10 /* RatingPickerViewController.swift in Sources */,
 				3BD1E63D1D76E171003E1F10 /* PlayerDetailsViewController.swift in Sources */,
 				3BD1E61D1D76C44D003E1F10 /* AppDelegate.swift in Sources */,
 				3BD1E6351D76CBD3003E1F10 /* SampleData.swift in Sources */,
@@ -310,6 +318,7 @@
 				3BD1E62D1D76C44D003E1F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

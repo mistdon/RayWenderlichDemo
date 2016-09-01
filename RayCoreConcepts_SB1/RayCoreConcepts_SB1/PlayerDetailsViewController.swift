@@ -10,14 +10,38 @@ import UIKit
 
 class PlayerDetailsViewController: UITableViewController {
 
+    @IBOutlet weak var sddfdf: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var detailLabel: UILabel!
     var plaer: Player?
-    
+    var game: String = "Chess"{
+        didSet{
+           detailLabel.text? = game
+        }
+    }
+    var rating: String  = "5"{
+        didSet{
+            let image = UIImage(named: "\(rating)Stars")
+            print("didset.. : \(rating)")
+            sddfdf.image = image
+        }
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SavePlayerDetail" {
-            plaer = Player(name: nameTextField.text!, game: "Chess", rating: 1)
+            plaer = Player(name: nameTextField.text!, game: game, rating: Int(rating)!)
         }
+        if segue.identifier == "pickGame" {
+            if let gamepickViewController = segue.destinationViewController as? GamePickerViewController {
+                gamepickViewController.seletedGame = game
+            }
+        }
+    }
+    required init?(coder aDecoder: NSCoder) {
+        print("init PlayerDetailsViewController")
+        super.init(coder: aDecoder)
+    }
+    deinit{
+        print("deinit detailsViewController")
     }
     
     override func viewDidLoad() {
@@ -34,11 +58,20 @@ class PlayerDetailsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func cancelToPlayersViewController(segue: UIStoryboardSegue) {
-        print("cancel")
+    @IBAction func unwindWithSelectedGame(segue: UIStoryboardSegue){
+        if let gamePickerViewController = segue.sourceViewController as? GamePickerViewController {
+            if let  seletedGame = gamePickerViewController.seletedGame{
+                game = seletedGame
+            }
+        }
     }
-    @IBAction func savePlayerDetail(segue: UIStoryboardSegue) {
-        print("save")
+    @IBAction func unwindWithSeletedRating(segue: UIStoryboardSegue){
+        if let ratingViewController = segue.sourceViewController as? RatingPickerViewController {
+            if let selectRating = ratingViewController.selectedRating{
+                print("selectrating = \(selectRating)")
+                rating = selectRating
+            }
+        }
     }
     
     // MARK: - Table view data source
@@ -82,6 +115,11 @@ class PlayerDetailsViewController: UITableViewController {
         }    
     }
     */
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 {
+            nameTextField.becomeFirstResponder()
+        }
+    }
 
     /*
     // Override to support rearranging the table view.
